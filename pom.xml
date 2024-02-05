@@ -21,9 +21,10 @@
     <artifactId>annotator</artifactId>
     <version>0.1.0</version>
     <packaging>jar</packaging>
-    <name></name>
-    <description>
 
+    <name>Annotation services over Java Beans</name>
+    <description>Annotator is a plain Java library targeted on delivering an uniform reflection and annotation API over
+        multiple object relational mapping use cases.
     </description>
     <url>https://github.com/agache41/annotator</url>
 
@@ -55,8 +56,8 @@
     </distributionManagement>
 
     <properties>
-        <maven.compiler.source>11</maven.compiler.source>
-        <maven.compiler.target>11</maven.compiler.target>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
         <maven.compiler.parameters>true</maven.compiler.parameters>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
@@ -111,13 +112,6 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
                 <version>3.3.0</version>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>test-jar</goal>
-                        </goals>
-                    </execution>
-                </executions>
             </plugin>
             <plugin>
                 <groupId>org.simplify4u.plugins</groupId>
@@ -128,7 +122,6 @@
                         <goals>
                             <goal>sign</goal>
                         </goals>
-
                     </execution>
                 </executions>
                 <configuration>

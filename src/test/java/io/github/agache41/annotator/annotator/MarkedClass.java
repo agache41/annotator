@@ -34,7 +34,6 @@ public class MarkedClass {
     @Recurse
     private InnerClass innerClass;
 
-
     @Multiple("one")
     @Multiple("two")
     private String multipleAnnotation;
