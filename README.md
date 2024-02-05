@@ -25,7 +25,7 @@ Given a specific scope that can be a class/instance/field/method/accessors, foll
 - getAccessorsThat(Matcher matcher) - Gets the accessors from the current scope that match the given matcher.
 
 Using the annotator class through this API multiple points of interest can be queried from the ORM perspective :
-classes,fields, methods, objects.
+classes, fields, methods, objects.
 The Library also introduces the concept of accessor, an unified API over properties of a class.
 The Accessor class provides uniform access methods over values stored in a Java Bean,
 either using setter-getter or direct field access.
@@ -120,7 +120,7 @@ Notice the used @Data annotation from [Lombok](https://projectlombok.org/).
 
 ### Querying
 
-The Annotator instance can be created on a class, instance of a class (object), field , method and accessor.
+The Annotator instance can be created on a class, instance of a class (object), field, method or accessor.
 Let's create it on a new MarkedClass instance and query the present annotations.
 
 ```java
@@ -213,7 +213,7 @@ The instances are being created at first call and are being reused and cached fo
 ### Limitations
 
 Querying for annotations can be done on every instance, that is because class, fields or methods can have them.
-Querying for fields on a class follows the same principle. You can not however look for like fields of methods
+Querying for fields on a class follows the same principle. You can not however look for like fields or methods
 on a field or method, an IllegalStateException will be thrown.
 
 ### Testing
