@@ -2,7 +2,7 @@
 
 Annotation services over Java Beans
 
-** Annotator ** is a plain Java library targeted on delivering
+**Annotator** is a plain Java library targeted on delivering
 an uniform reflection and annotation API over
 multiple [ORM](https://en.wikipedia.org/wiki/Object%E2%80%93relational_mapping) use cases.
 
@@ -240,7 +240,7 @@ public void testFieldsThatHaveTestExtends() {
 
 ## Accessor
 
-Accessor pattern implements uniform access to a class property, independent of the use cases
+**Accessor** pattern implements uniform access to a class property, independent of the use cases
 of field access or setter - getter access or any combination of them.
 A class property refers to a value being stored in a class.
 Starting from the standard java bean construct :
@@ -290,6 +290,8 @@ The method getAccessors() or the filtered getAccessorsThat()
 enable us to use accessors exactly like fields or methods.
 
 ## Methods
+
+The complete API can be found here :  [Accessor](src/main/java/io/github/agache41/annotator/accessor/Accessor.java)
 
 Methods that access general field or method properties
 
