@@ -31,7 +31,7 @@ import java.lang.annotation.*;
 public @interface Position {
     /**
      * <pre>
-     * Value int.
+     * The current position value.
      * </pre>
      *
      * @return the int
