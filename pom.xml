@@ -75,38 +75,6 @@
     </dependencies>
     <build>
         <plugins>
-<!--            <plugin>-->
-<!--                <groupId>org.apache.maven.plugins</groupId>-->
-<!--                <artifactId>maven-help-plugin</artifactId>-->
-<!--                <version>3.5.1</version>-->
-<!--                <executions>-->
-<!--                    <execution>-->
-<!--                        <phase>validate</phase>-->
-<!--                        <goals>-->
-<!--                            <goal>system</goal>-->
-<!--                        </goals>-->
-<!--                    </execution>-->
-<!--                </executions>-->
-<!--            </plugin>-->
-<!--            <plugin>-->
-<!--                <groupId>org.apache.maven.plugins</groupId>-->
-<!--                <artifactId>maven-antrun-plugin</artifactId>-->
-<!--                <version>3.1.0</version>-->
-<!--                <executions>-->
-<!--                    <execution>-->
-<!--                        <phase>validate</phase>-->
-<!--                        <goals>-->
-<!--                            <goal>run</goal>-->
-<!--                        </goals>-->
-<!--                        <configuration>-->
-<!--                            <target>-->
-<!--                                <echo>Displaying value of system variables</echo>-->
-<!--                                <echo> ${env.PATH}</echo>-->
-<!--                            </target>-->
-<!--                        </configuration>-->
-<!--                    </execution>-->
-<!--                </executions>-->
-<!--            </plugin>-->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -147,22 +115,7 @@
                 <artifactId>maven-jar-plugin</artifactId>
                 <version>3.3.0</version>
             </plugin>
-            <plugin>
-                <groupId>org.simplify4u.plugins</groupId>
-                <artifactId>sign-maven-plugin</artifactId>
-                <version>1.0.1</version>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>sign</goal>
-                        </goals>
-                    </execution>
-                </executions>
-                <configuration>
-                    <serverId>sign-key-id</serverId>
-                    <skipNoKey>false</skipNoKey>
-                </configuration>
-            </plugin>
+
         </plugins>
     </build>
     <profiles>
@@ -170,6 +123,22 @@
             <id>release</id>
             <build>
                 <plugins>
+                    <plugin>
+                        <groupId>org.simplify4u.plugins</groupId>
+                        <artifactId>sign-maven-plugin</artifactId>
+                        <version>1.0.1</version>
+                        <executions>
+                            <execution>
+                                <goals>
+                                    <goal>sign</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                        <configuration>
+                            <serverId>sign-key-id</serverId>
+                            <skipNoKey>false</skipNoKey>
+                        </configuration>
+                    </plugin>
                     <plugin>
                         <groupId>org.sonatype.central</groupId>
                         <artifactId>central-publishing-maven-plugin</artifactId>
