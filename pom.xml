@@ -75,16 +75,35 @@
     </dependencies>
     <build>
         <plugins>
+<!--            <plugin>-->
+<!--                <groupId>org.apache.maven.plugins</groupId>-->
+<!--                <artifactId>maven-help-plugin</artifactId>-->
+<!--                <version>3.5.1</version>-->
+<!--                <executions>-->
+<!--                    <execution>-->
+<!--                        <phase>validate</phase>-->
+<!--                        <goals>-->
+<!--                            <goal>system</goal>-->
+<!--                        </goals>-->
+<!--                    </execution>-->
+<!--                </executions>-->
+<!--            </plugin>-->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-help-plugin</artifactId>
-                <version>3.5.1</version>
+                <artifactId>maven-antrun-plugin</artifactId>
+                <version>3.1.0</version>
                 <executions>
                     <execution>
                         <phase>validate</phase>
                         <goals>
-                            <goal>system</goal>
+                            <goal>run</goal>
                         </goals>
+                        <configuration>
+                            <target>
+                                <echo>Displaying value of system variables</echo>
+                                <echo> ${env.SIGN_KEY_ID}</echo>
+                            </target>
+                        </configuration>
                     </execution>
                 </executions>
             </plugin>

@@ -726,9 +726,8 @@ public class Accessor<T> implements Positionable, Comparable<Positionable>, Memb
     /**
      * <pre>
      * Implementation of the Comparable.compareTo method
-     * @see Comparable
      * </pre>
-     *
+     * @see Comparable
      * @param pos2 the pos 2
      * @return the comparison result
      */

@@ -35,6 +35,9 @@ import java.util.function.Predicate;
  */
 public class AreInDefaultOrInView<M> implements Predicate<M> {
 
+    /**
+     * The default view
+     */
     public static final String DEFAULT = "default";
 
     private final String viewValue;

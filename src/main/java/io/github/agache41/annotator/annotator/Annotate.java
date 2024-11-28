@@ -144,9 +144,8 @@ public interface Annotate<T> {
     /**
      * <pre>
      * Implementation of the Object.toString() method
-     * @see Object
      * </pre>
-     *
+     * @see Object
      * @return the representation string
      */
     @Override
