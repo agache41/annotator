@@ -27,41 +27,6 @@ jobs:
           java-version: 11.0.22
           maven-version: 3.9.5
           cache-enabled: 'true'
-      - name: 'SIGN_KEY'
-        run: 'echo "$SIGN_KEY" | base64'
-        shell: bash
-        env:
-          SIGN_KEY: ${{ secrets.SIGN_KEY }}
-          SIGN_KEY_ID: ${{ secrets.SIGN_KEY_ID }}
-          SIGN_KEY_PASS: ${{ secrets.SIGN_KEY_PASS }}
-      - name: 'SIGN_KEY_ID'
-        run: 'echo "$SIGN_KEY_ID" | base64'
-        shell: bash
-        env:
-          SIGN_KEY: ${{ secrets.SIGN_KEY }}
-          SIGN_KEY_ID: ${{ secrets.SIGN_KEY_ID }}
-          SIGN_KEY_PASS: ${{ secrets.SIGN_KEY_PASS }}
-      - name: 'SIGN_KEY_PASS'
-        run: 'echo "$SIGN_KEY_PASS" | base64'
-        shell: bash
-        env:
-          SIGN_KEY: ${{ secrets.SIGN_KEY }}
-          SIGN_KEY_ID: ${{ secrets.SIGN_KEY_ID }}
-          SIGN_KEY_PASS: ${{ secrets.SIGN_KEY_PASS }}
-      - name: 'CENTRAL_PASSWORD'
-        run: 'echo "$CENTRAL_PASSWORD" | base64'
-        shell: bash
-        env:
-          CENTRAL_PASSWORD: ${{ secrets.CENTRAL_PASSWORD }}
-          SIGN_KEY_ID: ${{ secrets.SIGN_KEY_ID }}
-          SIGN_KEY_PASS: ${{ secrets.SIGN_KEY_PASS }}
-      - name: 'CENTRAL_USERNAME'
-        run: 'echo "$CENTRAL_USERNAME" | base64'
-        shell: bash
-        env:
-          CENTRAL_USERNAME: ${{ secrets.CENTRAL_USERNAME }}
-          SIGN_KEY_ID: ${{ secrets.SIGN_KEY_ID }}
-          SIGN_KEY_PASS: ${{ secrets.SIGN_KEY_PASS }}
       - name: Build with Maven
         run: mvn -B clean package sign:sign --file pom.xml
         env:
